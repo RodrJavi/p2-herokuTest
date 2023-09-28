@@ -1,0 +1,205 @@
+:root {
+    --bg-color: #90926C;
+    --feed-color: #9DB17C;
+    --black: #000000;
+    --dark-color: #1A281F;
+    --light-text: #FFFFFF;
+    --bg-light: #9CDE9F;
+}
+
+a {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: white;
+}
+
+a:active {
+    color: var(--light-text);
+}
+
+#y-home {
+    text-decoration: none;
+}
+
+#body-main {
+    background-color: var(--bg-color);
+}
+
+#loginBtn,
+#logoutBtn {
+    background-color: var(--dark-color);
+    color: var(--light-text)
+}
+
+#loginBtn:hover,
+#logoutBtn:hover,
+#signupbtn:hover,
+#profileBtn:hover,
+#followBtn:hover, 
+#unfollowBtn:hover {
+    background-color: var(--bg-light);
+}
+
+#header {
+    background-color: var(--bg-color);
+}
+
+#middle-column {
+    background-color: var(--feed-color) !important;
+    border: solid var(--dark-color) 1px;
+}
+
+#left-column,
+#right-column {
+    border-top: solid var(--dark-color) 1px;
+}
+
+#following-side {
+    background-color: var(--dark-color);
+    max-width: 300px;
+}
+
+#following-h1,
+#following-ul {
+    background-color: var(--dark-color);
+    list-style-type: none;
+}
+
+#loginBox,
+#signupBox {
+    border-bottom: solid var(--dark-color) 1px;
+}
+
+#loginPageBtn,
+#signupPageBtn {
+    background-color: var(--light-text);
+    color: var(--dark-color);
+}
+
+#loginPageBtn:hover,
+#signupPageBtn:hover {
+    background-color: var(--dark-color);
+    color: var(--light-text);
+}
+
+#postBox {
+    border-bottom: solid var(--dark-color) 1px;
+    border-top: solid var(--dark-color) 1px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+
+}
+
+#postUsername,
+#postDisplayname {
+    font-size: small;
+}
+
+#postDate {
+    font-size: x-small;
+}
+
+#post-content {
+    min-height: 200px;
+}
+
+#createPostBox {
+    border-bottom: solid var(--dark-color) 1px;
+}
+
+
+#profile-side,
+#news-side,
+#following-side,
+#news-side {
+    background-color: var(--dark-color);
+    max-width: 350px;
+    min-width: 200px;
+}
+
+#profilecard-h1,
+#news-h1 {
+    color: var(--light-text);
+    background-color: var(--dark-color);
+}
+
+ul {
+    margin-left: 0;
+}
+
+#news-li {
+    color: var(--light-text);
+    background-color: var(--dark-color);
+    list-style-type: none;
+    border-top: solid var(--black) 1px;
+    padding: 10px;
+}
+
+#following-user {
+    color: var(--light-text);
+    background-color: var(--dark-color);
+    list-style-type: none;
+    padding: 10px;
+}
+
+#news-a, #following-user-a, #posts-a{
+    text-decoration: none;
+}
+
+#searchbar {
+    background-color: var(--feed-color);
+}
+
+#searchbar-mag {
+    stroke: var(--dark-color);
+}
+
+#postContentContainer {
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+@media (max-width: 972px) {
+
+    #left-column,
+    #right-column {
+        display: none;
+    }
+
+    #middle-column {
+        grid-column: span 12;
+    }
+}
+
+@media (max-width: 480px) {
+    #header-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #Y-home {
+        justify-content: center;
+        text-align: center;
+    }
+
+    #search-bar-container {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    #ProfileBtn,
+    #logoutBtn,
+    #loginBtn,
+    #signupBtn {
+        margin: 4px 4px;
+    }
+
+}

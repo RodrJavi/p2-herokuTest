@@ -1,0 +1,24 @@
+<div class="grid grid-cols-12 h-screen">
+  <div class="col-span-3" id="left-column">
+
+
+    {{> following}}
+
+
+  </div>
+  <div class="col-span-6" id="middle-column">
+    
+    {{#each userPosts}}
+      {{> posts}}
+    {{/each}}
+
+  </div>
+  <div class="col-span-3" id="right-column">
+
+    {{> news}}
+
+  </div>
+  <script src="./js/weather.js"></script>
+  <script src="./js/homepage.js"></script>
+  <script src="./js/news.js"></script>
+</div> 

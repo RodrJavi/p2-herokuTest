@@ -1,0 +1,22 @@
+<div class="w-full relative" id="postBox">
+  <div
+    class="absolute inset-0 bg-cover bg-center"
+    {{!-- backgroundImage is of the weather from where the user is currently posting --}}
+    style="background-image: url('{{backgroundImage}}');"
+  ></div>
+  <div class="p-6 space-y-4 relative z-10">
+    <div id="postContentContainer">
+      {{content}}
+    </div>
+  </div>
+  <div class="p-6 space-y-4 relative z-10">
+    {{!-- Displays the username and displayname of whoever made the post and includes date of when post made --}}
+    <a href="/profile/{{user.username}}" id="posts-a">
+      <span id="postUsername">@{{user.username}}</span>
+      <span id="postDisplayname">{{user.displayName}}</span><br />
+      <span id="postDate" class="">{{{displayDate postDate}}}</span>
+    </a>
+
+  </div>
+
+</div>

@@ -1,0 +1,35 @@
+<div class="grid grid-cols-12 h-screen">
+  <div class="col-span-3 justify-end" id="left-column">
+    {{!-- Displays who the viewed user is currently following --}}
+    {{> following}}
+
+  </div>
+
+  <div class="col-span-6" id="middle-column">
+
+    {{#if isMobileView}}
+      {{> profilecard}}
+    {{/if}}
+
+    {{!-- Displays text box if logged in user is viewed user's page --}}
+    {{#if postPartial}}
+      {{> post}}
+    {{/if}}
+
+    {{!-- Displays all posts created by the viewed user --}}
+    {{#each userPosts}}
+      {{> posts}}
+    {{/each}}
+
+  </div>
+
+  <div class="col-span-3" id="right-column">
+
+      {{> profilecard}}
+
+  </div>
+
+</div>
+
+<script type="module" src="/js/post.js"></script>
+<script src="/js/weather.js"></script>

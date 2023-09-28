@@ -1,0 +1,34 @@
+<div class="flex justify-center">
+  <div
+    class="bg-white rounded-lg border-2 p-4 m-2 space-y-2 flex flex-col items-center"
+    id="profile-side"
+  >
+
+    <h1 class="bg-black text-white text-xl" id="profilecard-h1">
+      {{user.displayName}}
+    </h1>
+    <h3 class="text-white text-sm" id="profilecard-h3">
+        @{{user.username}}
+    </h3>
+    <h3 class="text-white text-sm" id="profilecard-h3">
+        {{user.email}}
+    </h3>
+
+    {{!-- Displays an option to follow the viewed user if not followed and vice versa --}}
+    {{#if followButton}}
+      {{#if showUnfollowButton}}
+        <button class="font-bold py-2 px-4 border rounded text-lg" id="unfollowBtn">
+          Unfollow
+        </button>
+      {{else}}
+        <button class="font-bold py-2 px-4 border rounded text-lg" id="followBtn">
+          Follow
+        </button>
+      {{/if}}
+    {{/if}}
+
+  </div>
+</div>
+
+<script src="/js/followUser.js"></script>
+<script src="/js/unfollowUser.js"></script>

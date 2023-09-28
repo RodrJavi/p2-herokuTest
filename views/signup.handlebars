@@ -1,0 +1,65 @@
+<div class="grid grid-cols-12 h-screen">
+  <div class="col-span-3" id="left-column"> </div>
+
+  <div class="col-span-6" id="middle-column">
+
+    <div class="w-full" id="signupBox">
+      <div class="p-6 space-y-4">
+        <h1 class="text-lg font-bold">
+          Sign up for Y
+        </h1>
+        <form class="space-y-4 signup-form">
+          <div>
+            <label for="username" class="block mb-2 text-md">Choose a username</label>
+            <input
+              type="username"
+              name="username"
+              id="username-signup"
+              class="border rounded-lg block w-full p-2.5"
+            />
+          </div>
+          <div>
+            <label for="displayname" class="block mb-2 text-md">Choose a display name</label>
+            <input
+              type="displayname"
+              name="displayname"
+              id="displayname-signup"
+              class="border rounded-lg block w-full p-2.5"
+            />
+          </div>
+          <div>
+            <label for="email" class="block mb-2 text-md">Your email</label>
+            <input
+              type="email"
+              name="email"
+              id="email-signup"
+              class="border rounded-lg block w-full p-2.5"
+            />
+          </div>
+          <div>
+            <label for="password" class="block mb-2 text-md">Create a password</label>
+            <input
+              type="password"
+              name="password"
+              id="password-signup"
+              class="border rounded-lg block w-full p-2.5"
+            />
+          </div>
+          <button
+            type="submit"
+            class="border rounded-lg block w-full p-2.5 font-bold"
+            id="signupPageBtn"
+          >
+            Sign up
+          </button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-span-3" id="right-column"></div>
+
+</div>
+
+<script src="/js/signup.js"></script>

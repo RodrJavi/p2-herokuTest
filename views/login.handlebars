@@ -1,0 +1,33 @@
+<div class="grid grid-cols-12 h-screen">
+  <div class="col-span-3" id="left-column"> </div>
+
+  <div class="col-span-6" id="middle-column">
+
+    <div class="w-full" id="loginBox">
+      <div class="p-6 space-y-4">
+        <h1 class="text-lg font-bold">
+          Sign into your account
+        </h1>
+        <form class="space-y-4 login-form">
+          <div>
+            <label for="email" class="block mb-2 text-md ">Your email</label>
+            <input type="email" name="email" id="email-login" class="border rounded-lg block w-full p-2.5">
+          </div>
+          <div>
+            <label for="password" class="block mb-2 text-md ">Your password</label>
+            <input type="password" name="password" id="password-login" class="border rounded-lg block w-full p-2.5">
+          </div>
+          <button type="submit" class="border rounded-lg block w-full p-2.5 font-bold" id="loginPageBtn">
+            Log in
+          </button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-span-3" id="right-column"></div>
+
+</div>
+
+<script src="/js/login.js"></script>

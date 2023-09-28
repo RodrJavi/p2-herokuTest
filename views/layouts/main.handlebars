@@ -1,0 +1,92 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Y</title>
+    <link rel="reset" href="/css/reset.css"/>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"></script>
+
+  </head>
+  <body class="text-white font-mono" id="body-main">
+    <header id="header">
+      <nav class="px-4 lg:px-6 py-2.5">
+        <div
+          class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl"
+          id="header-container"
+        >
+          <div class="flex items-center">
+            <a href="/" class="flex items-center" id="Y-home">
+              <h1 class="self-center text-3xl font-semibold whitespace-nowrap">
+                Y
+              </h1>
+            </a>
+          </div>
+
+          {{#if logged_in}}
+          <div class="flex items-center" id="search-bar-container">
+            <div class="relative items-center mr-2">
+              <input
+                type="text"
+                class="border rounded text-md p-2 pl-8 w-48"
+                placeholder="Search user"
+                id="searchbar"/>
+              <svg
+                class="absolute top-2 left-2 h-4 w-4 text-gray-400"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                id="searchbar-mag">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m-1-6a7 7 0 11-14 0 7 7 0 0114 0z">
+              </svg>
+            </div>
+          {{/if}}
+          <div class="flex items-center right-0" id="header-buttons">
+            {{#if logged_in}}
+              <a href="/profile">
+                <button
+                  class="font-bold py-2 px-4 border rounded text-md mr-2"
+                  id="ProfileBtn"
+                >Profile</button>
+              </a>
+              <button
+                class="font-bold py-2 px-4 border rounded text-md"
+                id="logoutBtn"
+              >Log out</button>
+            {{else}}
+              <a href="/login">
+                <button
+                  class="font-bold py-2 px-4 border rounded text-md mr-2"
+                  id="loginBtn"
+                >Log in</button>
+              </a>
+              <a href="/signup">
+                <button
+                  class="font-bold py-2 px-4 border rounded text-md"
+                  id="signupBtn"
+                >Sign up</button>
+              </a>
+            {{/if}}
+          </div>
+        </div>
+      </nav>
+
+    </header>
+
+    {{{body}}}
+
+    <footer>
+
+    </footer>
+
+    {{#if logged_in}}
+      <script src="/js/logout.js"></script>
+      <script src="/js/searchbar.js"></script>
+    {{/if}}
+  </body>
+
+</html>
